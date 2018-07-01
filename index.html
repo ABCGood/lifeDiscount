@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>生活优惠</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+</head>
+
+<style>
+    .layuiTab{
+        position: absolute;
+        width:98%;
+        background:#FFF;
+        z-index: 200;
+    }
+    #layuiTabContent{
+        padding-top: 40px;
+    }
+    .fixednav{
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    .layui-tab-title{
+        padding: 0 3px;
+        /*border-left: none;*/
+        /*border-bottom: .2px solid #e6e6e6;*/
+    }
+    .layui-tab-title li{
+        min-width: 16.66666667%;
+    }
+    .layui-tab-title .layui-this{
+        color: #cf292e;
+    }
+    .layui-tab-title, .layui-tab-content{
+        background-color: white;
+    }
+    .layui-tab-content{
+        padding: 5px 10px 0 10px;
+    }
+    .layui-badge-rim, .layui-colla-content, .layui-colla-item, .layui-collapse, .layui-elem-field, .layui-form-pane .layui-form-item[pane], .layui-form-pane .layui-form-label, .layui-input, .layui-layedit, .layui-layedit-tool, .layui-quote-nm, .layui-select, .layui-tab-bar, .layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this:after, .layui-textarea{
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: .2px solid #e6e6e6;
+    }
+    .layui-tab-title .layui-this:after{
+        border-bottom: 2px solid #cf292e;
+    }
+    .swiper-pagination-bullet-active{
+        background: #cf292e;
+    }
+    .swiper-pagination-bullet{
+        width: 5px;
+        height: 5px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 6px;
+    }
+</style>
+<body>
+
+<!-- 头部 -->
+<div class="titles">
+    <div class="titlesFontAdress">
+        <span>揭阳市</span>
+        <img class="titles_Img" src="image/1.png">
+    </div>
+    <div class="topTitle">
+        <img class="topTitleImg" src="image/2.png">
+        <input placeholder="消费返还，最高返100%">
+    </div>
+    <div class="titles_Img1">
+        <img src="image/3.png">
+    </div>
+    <div class="titles_Right">
+        <span>分类</span>
+    </div>
+</div>
+
+<!-- 顶部轮播图 -->
+<div class="swipeContent">
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="max-width: 33.3%">
+                <div class="swiperSlide1">
+                    <div class="swiperSlide1Title">
+                        <p class="swiperSlide1TitleL"></p>
+                        <div class="swiperSlide1TitleR">
+                            <p class="swiperSlide1TRT over1">天天抢红包</p>
+                            <p class="swiperSlide1TRB over1">城市特色美食</p>
+                        </div>
+                        <div class="swiperSlide1Img">
+                            <img src="image/4.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="max-width: 33.3%">
+                <div class="swiperSlide1">
+                    <div class="swiperSlide1Title">
+                        <p class="swiperSlide1TitleL"></p>
+                        <div class="swiperSlide1TitleR">
+                            <p class="swiperSlide1TRT over1">PSUH</p>
+                            <p class="swiperSlide1TRB over1">城市特色美食</p>
+                        </div>
+                        <div class="swiperSlide1Img">
+                            <img src="image/5.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="max-width: 33.3%">
+                <div class="swiperSlide1">
+                    <div class="swiperSlide1Title">
+                        <p class="swiperSlide1TitleL"></p>
+                        <div class="swiperSlide1TitleR">
+                            <p class="swiperSlide1TRT over1">会员特惠卡</p>
+                            <p class="swiperSlide1TRB over1">城市特色美食</p>
+                        </div>
+                        <div class="swiperSlide1Img">
+                            <img src="image/6.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="max-width: 33.3%">
+                <div class="swiperSlide1">
+                    <div class="swiperSlide1Title">
+                        <p class="swiperSlide1TitleL"></p>
+                        <div class="swiperSlide1TitleR">
+                            <p class="swiperSlide1TRT over1">PSUH</p>
+                            <p class="swiperSlide1TRB over1">城市特色美食</p>
+                        </div>
+                        <div class="swiperSlide1Img">
+                            <img src="image/5.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 我的关注 -->
+<div class="myConcern">
+    <div class="myConcernTitle">
+        <p>我的关注</p>
+    </div>
+    <div class="myConcernContent layui-col-xs4">
+        <div class="myConcernContentList">
+            <img src="image/img1.jpg">
+            <div class="over1">格力中央空调服务中心</div>
+            <p class="over1">666人关注|人均￥10</p>
+        </div>
+    </div>
+    <div class="myConcernContent layui-col-xs4">
+        <div class="myConcernContentList">
+            <img src="image/img1.jpg">
+            <div class="over1">格力中央空调服务中心</div>
+            <p class="over1">666人关注|人均￥10</p>
+        </div>
+    </div>
+    <div class="myConcernContent layui-col-xs4">
+        <div class="myConcernContentList">
+            <img src="image/img1.jpg">
+            <div class="over1">格力中央空调服务中心</div>
+            <p class="over1">666人关注|人均￥10</p>
+        </div>
+    </div>
+</div>
+
+<!-- 选项卡 -->
+<div class="tabsList">
+    <div class="layui-tab">
+        <!--<ul class="layui-tab-title" id="layuiTab">-->
+        <ul class="layui-tab-title layuiTab">
+            <li class="layui-this layui-col-xs2">团购</li>
+            <li class="layui-col-xs2">门店</li>
+            <li class="layui-col-xs2">商城</li>
+            <li class="layui-col-xs2">预约</li>
+            <li class="layui-col-xs2">二手</li>
+            <li class="layui-col-xs2">租凭</li>
+        </ul>
+        <div class="layui-tab-content" id="layuiTabContent">
+            <div class="layui-tab-item layui-show">
+                <div>
+                    <div class="swiper-container" style="height: 180px">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tabsListSwiperContent">
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">优选美食</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">酒店住宿</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">俪人美妆</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">运动保健</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">电影门票</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">车主服务</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">婚纱摄影</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">旅游组团</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">休闲娱乐</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">送药上门</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tabsListSwiperContent">
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">优选美食</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">酒店住宿</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">俪人美妆</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">运动保健</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">电影门票</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">车主服务</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">婚纱摄影</div>
+                                    </div>
+                                    <div class="tabsListSwiperConUl">
+                                        <img src="image/img2.jpg">
+                                        <div class="over1">旅游组团</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tabsListSwiperContent">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">内容2</div>
+            <div class="layui-tab-item">内容3</div>
+            <div class="layui-tab-item">内容4</div>
+            <div class="layui-tab-item">内容5</div>
+            <div class="layui-tab-item">内容5</div>
+        </div>
+    </div>
+</div>
+
+<!-- 团购横图 -->
+<div class="groupPurchase">
+    <div class="layui-col-xs6">
+        <div class="groupPurchaseList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: #cf292e">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6">
+        <div class="groupPurchaseList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: #9F9F9F">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: yellowgreen">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6">
+        <div class="groupPurchaseList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: #9F9F9F">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6">
+        <div class="groupPurchaseList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: #cf292e">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchase" style="background: yellowgreen">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 团购竖图 -->
+<div class="groupPurchaseVer">
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #2D93CA">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #FF5722">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #9F9F9F">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #2F4056">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #2D93CA">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #FF5722">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #9F9F9F">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="groupPurchaseVerList">
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: #2F4056">
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: saddlebrown">
+                                <div>2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide layui-col-xs4">
+                        <div class="swiperSlide1">
+                            <div class="swiperrouGpPurchaseVer" style="background: white">
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 为您优选内容 -->
+<div class="preferredContent">
+    <div style="text-align: center;border-bottom: .2px solid #e6e6e6;">
+        <div class="preferredContentTitle">
+            <div>
+                <img src="image/9.png">
+            </div>
+            <div>
+                <p>为您优选</p>
+            </div>
+            <div>
+                <img src="image/9.png">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="preferredContentList">
+            <div class="preferredContentListTitle">
+                <div class="layui-col-xs1">
+                    <img src="image/8.png">
+                </div>
+                <div class="preferredContentListTitle1 layui-col-xs9">
+                    <p>彬兄麻辣酸菜鱼</p>
+                </div>
+                <div class="preferredContentListTitle2 layui-col-xs2">
+                    <p>500m</p>
+                </div>
+            </div>
+        </div>
+        <div class="preferredConListContent">
+            <div class="preferredConListConImg1">
+                <img src="image/10.png">
+            </div>
+            <div class="preferredConListConFont">
+                <div class="preferredConListConFontTitle over1">
+                    <p>砂锅牛肉煲</p>
+                </div>
+                <div class="over2 preferredConListConFontxq">
+                    <p><span style="color: #f4c547;border: 1px solid #f4c547;">到店消费</span>店内提供免费WiFi,提供停车位，婴儿椅</p>
+                </div>
+                <div class="preferredConListConIcon">
+                    <span>早餐</span>
+                    <span>微辣</span>
+                    <span>一人餐</span>
+                    <span>无需预约</span>
+                </div>
+                <div class="preferredConListConFontBottom">
+                    <span class="first">￥80</span><span>/份 | 已售100</span><span class="fontBtn">立即抢购</span>
+                </div>
+            </div>
+            <div class="preferredConListConImg">
+                <img src="image/img1.jpg">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="preferredContentList">
+            <div class="preferredContentListTitle">
+                <div class="layui-col-xs1">
+                    <img src="image/8.png">
+                </div>
+                <div class="preferredContentListTitle1 layui-col-xs9">
+                    <p>老三牛肉店提供</p>
+                </div>
+                <div class="preferredContentListTitle2 layui-col-xs2">
+                    <p>500m</p>
+                </div>
+            </div>
+        </div>
+        <div class="preferredConListContent">
+            <div class="preferredConListConImg1">
+                <img src="image/11.png">
+            </div>
+            <div class="preferredConListConFont">
+                <div class="preferredConListConFontTitle over1">
+                    <p>砂锅牛肉煲</p>
+                </div>
+                <div class="over2 preferredConListConFontxq">
+                    <p><span style="color: #c08745;border: 1px solid #c08745;">快递包邮</span>店内提供免费WiFi,提供停车位，婴儿椅</p>
+                </div>
+                <div class="preferredConListConIcon">
+                    <span>早餐</span>
+                    <span>微辣</span>
+                    <span>一人餐</span>
+                    <span>无需预约</span>
+                </div>
+                <div class="preferredConListConFontBottom">
+                    <span class="first">￥80</span><span>/份 | 已售100</span><span class="fontBtn">立即抢购</span>
+                </div>
+            </div>
+            <div class="preferredConListConImg">
+                <img src="image/img1.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 60px;width: 100%"></div>
+
+<!-- 底部 -->
+<div class="bottomIcon">
+    <div class="bottomIconContent">
+        <a href="home_page.html">
+            <img src="image/19.png">
+            <p>首页</p>
+        </a>
+    </div>
+    <div class="bottomIconContent">
+        <img src="image/12.png">
+        <p class="bottomIconContentActivity">惠生活</p>
+    </div>
+    <div class="bottomIconContent">
+        <a href="friend_page.html">
+            <img src="image/13.png">
+            <p>朋友圈</p>
+        </a>
+    </div>
+    <div class="bottomIconContent">
+        <a href="home_page.html">
+            <img src="image/14.png">
+            <p>家政帮</p>
+        </a>
+    </div>
+    <div class="bottomIconContent">
+        <a href="user_page.html">
+            <img src="image/15.png">
+            <p>我的</p>
+        </a>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="swiper/js/swiper.min.js"></script>
+<script src="js/index.js"></script>
+<script src="layui/lay/modules/laytpl.js"></script>
+
+</body>
+</html>
